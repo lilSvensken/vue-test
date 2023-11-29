@@ -14,7 +14,6 @@
     <!--    <button v-show="isActiveBtn">Отправить - 2</button>-->
     <button class="btn" :class="{'hide': !isActiveBtn}">Отправить</button>
 
-
     <ul>
       <li
         v-for="(userItem, index) in users"
@@ -29,22 +28,21 @@
 const ARR_DATA = [
   {
     id: 1,
-    name: "Jon"
+    name: 'Jon'
   },
   {
     id: 2,
-    name: "Masha"
+    name: 'Masha'
   },
   {
     id: 3,
-    name: "Any"
+    name: 'Any'
   }
 ]
 
-
 export default {
   name: 'TestComponent',
-  data() {
+  data () {
     return {
       count: 0,
       href: 'https://google.com',
@@ -52,7 +50,7 @@ export default {
       users: ARR_DATA
     }
   },
-  mounted() {
+  mounted () {
     // setInterval(() => {
     //   this.count ++;
     // }, 1000)
@@ -61,32 +59,32 @@ export default {
     //   this.isActiveBtn = true
     // }, 2000)
 
-    console.log(this.$refs.myInput);
+    console.log(this.$refs.myInput)
   },
   methods: {
-    onClickContainer(event, str) {
+    onClickContainer (event, str) {
       console.log(event, str)
-      this.count++;
+      this.count++
     },
-    onClickLink(event) {
+    onClickLink (event) {
       // не нужно прописывать, потому что есть @click.prevent
       // event.preventDefault();
       console.log('click')
     },
-    onKeydown(event) {
+    onKeydown (event) {
       console.log(event.key)
     },
 
-    changeInputValue(event) {
-      const value = event.target.value;
+    changeInputValue (event) {
+      const value = event.target.value
 
       // this.isActiveBtn = Boolean(value);
-      this.isActiveBtn = !!value;
+      this.isActiveBtn = !!value
     }
   },
 
   computed: {
-    getResult() {
+    getResult () {
       return this.count + 10
     }
   }

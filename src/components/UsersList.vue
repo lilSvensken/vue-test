@@ -14,38 +14,38 @@
 </template>
 
 <script>
-import User from "@/components/User.vue";
+import User from '@/components/User.vue'
 
 const ARR_DATA = [
   {
     id: 1,
-    name: "Jon",
+    name: 'Jon',
     age: 18
   },
   {
     id: 2,
-    name: "Masha",
+    name: 'Masha',
     age: 20
   },
   {
     id: 3,
-    name: "Any",
+    name: 'Any',
     age: 35
   }
 ]
 
 export default {
-  name: "UsersList",
+  name: 'UsersList',
   components: { User },
-  data() {
+  data () {
     return {
       users: ARR_DATA
     }
   },
   methods: {
-    removeItem(ev, id) {
-      this.users = this.users.filter(item => item.id !== id);
+    removeItem (ev, id) {
+      this.users = this.users.filter(item => item.id !== id)
     }
   }
-};
+}
 </script>

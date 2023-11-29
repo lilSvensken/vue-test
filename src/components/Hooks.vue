@@ -4,18 +4,18 @@
 
 <script>
 export default {
-  name: "Hooks",
-  beforeCreate() {
+  name: 'Hooks',
+  beforeCreate () {
     console.log('beforeCreate')
   },
-  created() {
+  created () {
     console.log('created')
   },
-  beforeMount() {
+  beforeMount () {
     console.log('beforeMount')
   },
-  mounted() {
+  mounted () {
     console.log('mounted')
   }
-};
+}
 </script>

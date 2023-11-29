@@ -11,9 +11,9 @@
 
 <script>
 export default {
-  name: "User",
+  name: 'User',
   // эмиты для пробрасывания значения в родителя
-  emits: ["remove"],
+  emits: ['remove'],
 
   // 1 способ:
   // props: ["userName", "age"],
@@ -28,7 +28,7 @@ export default {
   props: {
     userName: {
       type: String,
-      required: false,
+      required: false
     },
     age: {
       type: Number,
@@ -43,14 +43,14 @@ export default {
     }
   },
 
-  created() {
+  created () {
     console.log(this.userName)
   },
 
   methods: {
-    removeItem() {
-      this.$emit("remove", "Отправляемые данные");
+    removeItem () {
+      this.$emit('remove', 'Отправляемые данные')
     }
   }
-};
+}
 </script>

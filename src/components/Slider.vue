@@ -21,8 +21,8 @@
 const sliders = ['1', '2']
 
 export default {
-  name: "Slider",
-  data() {
+  name: 'Slider',
+  data () {
     return {
       slidersList: sliders,
       xPos: undefined,
@@ -30,28 +30,28 @@ export default {
     }
   },
   methods: {
-    onMouseDown(event) {
-      this.xPos = event.x;
+    onMouseDown (event) {
+      this.xPos = event.x
     },
-    onMouseUp(event) {
-      const newX = event.x;
+    onMouseUp (event) {
+      const newX = event.x
       if ((this.xPos - newX) > 40 || (this.xPos - newX) < -40) {
         if (newX < this.xPos) {
           if (this.currentSlide < this.slidersList.length - 1) {
-            this.currentSlide++;
+            this.currentSlide++
           }
         } else {
           if (this.currentSlide > 0) {
-            this.currentSlide--;
+            this.currentSlide--
           }
         }
       }
 
-      this.xPos = undefined;
+      this.xPos = undefined
     }
   },
   computed: {}
-};
+}
 </script>
 
 <style>

@@ -16,22 +16,22 @@
 
 <script>
 export default {
-  name: "Form",
-  data() {
+  name: 'Form',
+  data () {
     return {
       form: {
-        film: "",
-        isCheck: "Нет",
-        typeFilm: ["2", "3"]
+        film: '',
+        isCheck: 'Нет',
+        typeFilm: ['2', '3']
       }
     }
   },
 
   methods: {
-    onSubmit(e) {
-      e.preventDefault();
-      console.log('Отправляемые данные:', this.form);
+    onSubmit (e) {
+      e.preventDefault()
+      console.log('Отправляемые данные:', this.form)
     }
   }
-};
+}
 </script>

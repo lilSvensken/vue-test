@@ -9,23 +9,23 @@
 </template>
 
 <script>
-import CounterChild from "@/components/watch/CounterChild.vue";
+import CounterChild from '@/components/watch/CounterChild.vue'
 
 export default {
-  name: "CounterAndWatch",
+  name: 'CounterAndWatch',
   components: { CounterChild },
-  data() {
+  data () {
     return {
       currentNumber: 0
     }
   },
   methods: {
-    plus() {
-      this.currentNumber++;
+    plus () {
+      this.currentNumber++
     },
-    minus() {
-      this.currentNumber--;
+    minus () {
+      this.currentNumber--
     }
   }
-};
+}
 </script>
