@@ -1,29 +1,19 @@
 <template>
-  <!--    <TestComponent />-->
-  <!--  <Slider/>-->
-  <!--  <UsersList/>-->
-<!--  <CounterAndWatch />-->
+  <LayoutHeader/>
 
-  <Form />
+  <router-view/>
+
+  <footer>footer</footer>
 </template>
 
 <script>
-import TestComponent from '@/components/TextComponent.vue'
-import Slider from '@/components/Slider.vue'
-import UsersList from '@/components/UsersList.vue'
-import CounterAndWatch from '@/components/watch/CounterAndWatch.vue'
-import Hooks from '@/components/Hooks.vue'
-import Form from '@/components/Form.vue'
+
+import LayoutHeader from '@/layout/layout-header/LayoutHeader.vue'
 
 export default {
   name: 'App',
   components: {
-    Form,
-    Hooks,
-    CounterAndWatch,
-    UsersList,
-    Slider,
-    TestComponent
+    LayoutHeader
   }
 }
 </script>
