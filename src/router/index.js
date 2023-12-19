@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/news/:id',
       name: 'newsList',
       component: () => import('../pages/news-page/NewsPage.vue')
+    },
+    {
+      path: '/list',
+      name: 'listPage',
+      component: () => import('../pages/list-page/ListPage.vue')
     }
   ]
 })

@@ -1,9 +1,24 @@
 <template>
   <div>
-    <h2>
-      Первый пост:
-      {{ postsStore.getFirstPost }}
-    </h2>
+    <h1>Список постов</h1>
+
+    <div v-if="postsStore.isLoading">
+      ЗАГРУЗКА...
+    </div>
+
+    <div v-if="postsStore.error">
+      У ВАС ОШИБКА {{ postsStore.error }}
+    </div>
+
+    <ul>
+      <li
+        v-for="(itemPost, index) in postsStore.posts"
+        :key="index"
+      >
+        {{ itemPost.title }}
+      </li>
+    </ul>
+
     <button @click="fetchPost">Получить посты</button>
     <button @click="onClear">Очистить</button>
   </div>
@@ -12,7 +27,7 @@
 import { PostsStore } from '@/stores/posts.store'
 
 export default {
-  name: 'MainPage',
+  name: 'ListPage',
   setup () {
     const postsStore = PostsStore()
     return { postsStore }

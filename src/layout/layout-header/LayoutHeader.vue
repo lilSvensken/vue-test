@@ -1,10 +1,8 @@
 <template>
   <div class="container">
+    <div id="header-btn"></div>
     <router-link to="/">Главная</router-link>
-    <router-link to="/news/1">Новость 1</router-link>
-    <router-link to="/news/2">Новость 2</router-link>
-    <router-link to="/any">Еще страница</router-link>
-    <router-link to="/any">Еще страница</router-link>
+    <router-link to="/list">Список Постов</router-link>
   </div>
 </template>
 
